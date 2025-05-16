@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Miniver&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+  --white: #fff;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+span.highlight {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend', 'Livvic', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Josefin Sans', 'Anton', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+span {
+  color: hsl(194, 100%, 52%);
+  font-weight: bolder;
+  margin-left: 10px;
+}
+/* --x-GLOBAL class-x- */
+.log {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* ----image of logo----- */
+.log-image {
+  margin: 0rem;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* --x--image of logo---x-- */
+/*  ======navigation======== */
+/* ---------navigation------- */
+.header-section {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation {
+  padding: 15px 0;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-item-link {
+  margin-right: 50px;
+}
+
+.nav-item-link a {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.nav-item-link a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  bottom: -5px;
+  left: 0;
+  transition: var(--transition);
+}
+.nav-item-link a.active{
+  color: hsl(207, 100%, 50%);
+}
+
+.nav-item-link a:hover::after {
+  width: 100%;
+}
+/* ------x--link-items---x--- */
+
+/* ---responsive--- */
+@media (max-width: 750px) {
+  .nav-items,
+  .nav-links {
+    font-size: 100vw;
+    flex-direction: column;
+  }
+  .the-bar-collapse {
+    display: initial;
+  }
+}
+ 
+@media (max-width: 750px) {
+  .jobs-prov {
+    flex-direction: column;
+    font-size: 200px;
+  }
+} 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 8rem;
+  }
+  .title {
+    font-size: 7rem;
+  }
+}
+/* --x-responsive--x- */
+/* ---------the-bar-collapse----- */
+.the-bar-collapse {
+  position: absolute;
+  top: 3%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+.bar-collapse-icon {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2.6rem;
+  color: blue;
+}
+/* ------x---the-bar-collapse---x-- */
+/* ------x---navigation----x--- */
+
+/* ------section content------ */
+/* ------- description-content-------*/
+
+
+
+
+/*  -==========main content============ */
+.description {
+  height: 100vh;
+  background: linear-gradient(rgba(58, 56, 56, 0.7), rgba(58, 56, 56, 0.7)), 
+              url('A\ New\ Career_.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 80px; /* To account for fixed header */
+}
+.description-content h1 {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.description-content{
+  margin:auto
+}
+
+.description h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.about-title {
+  text-align: center;
+  margin-bottom: 50px;
+
+}
+
+/* -----x-- description-content----x---*/
+
+/* --x----section content----x-- */
+.about-title h1::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary-color);
+  bottom: -250px;
+  left: 25%;
+}
+/* --------about-container-------- */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  background-color: var(--white-color);
+}
+
+/* -------about-image------ */
+.about-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.about-image img {
+  transition: var(--transition);
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+/* ----x---about-image---x--- */
+/* --------about-image-description------- */
+.about-image-description p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+.about-image-description span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+.about-image-description {
+  flex: 1;
+}
+/* ------x--about-image-description---x---- */
+/* ----x----about-container----x---- */
+/* ----------jobs content------- */
+.jobs-provided-descri h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+  margin-left: 60rem;
+}
+.job-descr{
+    background-color: hsl(0, 100%, 100%);
+  margin: 0.9rem 2.9rem;
+  border-radius: 1rem 1rem;
+  padding: 3rem 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.jobs-provided-descri h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: var(--secondary-color);
+  bottom: -10px;
+  left: 25%;
+}
+/* ---------slides---------- */
+/* -----x----slides--------x-- */
+.jobs-prov {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.employment{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom:10rem;
+background: var(--light-color);
+padding: 2rem 0rem;
+margin-left: 2rem;
+}
+.employment1{
+  margin-right: 2rem;
+}
+.descri-tion p{
+  font-size: 2em;
+  margin-left: 2rem;
+}
+.slider2{
+  height: 300px;
+}
+.descri-tion1 p{
+  font-size: 2rem;
+  width:70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.descri-tion1{
+  display: flex;
+  margin-bottom: 20rem;
+  margin-left: 2rem;
+  background: var(--white);
+  padding: 2rem ;
+  box-shadow: var(--shadow);
+}
+.employment-pic{
+  margin-left: 10rem;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: 0.9 ease-in-out;
+}
+.employment-pic:hover{
+  transform: scale(1.02);
+  border-radius: 20px;
+
+}
+.image-job-descript{
+  font-size: 2rem;
+  
+}
+
+
+  .slider,.slider1,.slider2 {
+    position: relative;
+    width: 670px;
+    height: 400px;
+    overflow: hidden;
+  
+  }
+
+  .slide,.slide1,.slides1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+  .slide1.active{
+    opacity: 1;
+  }
+  .slides1.active{
+    opacity: 1;
+  }
+
+
+
+
+/*  ==================footer========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 60px 0 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-log, .footer-information, .footer-location {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.footer-p {
+  margin-bottom: 20px;
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+
+.footer-about {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.footer-about-p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.footer-cont {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.icons-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-phone, .footer-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon1, .icon2, .icon3 {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-ph, .email {
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+
+.info {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.foot-item a {
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.foot-item a:hover {
+  color: var(--white);
+  padding-left: 5px;
+}
+
+.locate {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.location-add {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+
+.add {
+  color: var(--text-light);
+}
+
+.subscription {
+  margin-bottom: 30px;
+}
+
+.sub-info {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 20px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: inherit;
+  outline-style: none
+}
+
+.button button {
+  width: 100%;
+  background: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.button button:hover {
+  background: var(--accent-color);
+  color: var(--dark-color)
+}
+.button button:active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.social2-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ice1, .ice2, .ice3, .ice4 {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.ice1:hover, .ice2:hover, .ice3:hover, .ice4:hover {
+  transform: translateY(-7px);
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hr1 {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.cpy p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}

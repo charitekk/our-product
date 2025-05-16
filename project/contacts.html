@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contacts</title>
+    <link rel="icon" type="image/jpg" href="log.png" />
+    <!-- ----custom style---- -->
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="all.css" />
+    <!-- --x--custom style---x- -->
+
+    <!-- --------font-family------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Miniver&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------x--font-family---x--- -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ==========heading contact========= -->
+    <header>
+        <div class="contact">
+
+            <div class="contact-title">
+              <h1 class="info1">CONTACT US</h1>
+            </div>
+            <div class="info">
+              <p class="par">
+                Have questions or need assistance? We're here to help!
+                At Swift-Jobs, your success is our priority. Whether you're a job seeker looking for the right opportunity or an employer seeking qualified candidates, our team is ready to support you every step of the way.
+                <br>
+                Get in touch with us:
+              </p>
+            </div>            
+        </div>
+
+
+
+    
+            <div class="our-contacts">
+
+       
+      
+        <div class="our-info">
+
+
+
+          
+      <!-- ========address========== -->
+            <div class="address1">
+                <div class="icon-address">
+                    <img src="icons/Home.ico" alt="home" class="home">
+                </div>
+                <div class="address-info">
+                    <h1 class="h1">
+                        ADDRESS
+                    </h1>
+                    <p class="add">
+                        KG123 Road,<br>
+                        Kicukiro,Kigali ,<br>
+                        54321
+                    </p>
+                </div>
+            </div>
+
+<!-- ==========phone numbers======== -->
+            <div class="phone-number1">
+                <div class="icon-phone">
+                    <img src="icons/Phone.ico" alt="phone"  class="phone">
+                </div>
+                <div class="phone-number">
+                    <h1 class="h2">
+                        PHONE
+                    </h1>
+                    <p class="ph"> 
+                        +250 722883307
+                    </p>
+                </div>
+            </div>
+            <!-- ========email========== -->
+             <div class="email-info">
+                <div class="icon-email">
+                    <img src="icons/Email.ico" alt="email" class="email">
+                </div>
+                <div class="email-info1">
+                    <h1 class="h2">
+                        E-MAIL
+                    </h1>
+                    <p class="em">
+                        SWIFT JOBS123@gmail.com
+                    </p>
+                </div>
+             </div>
+
+
+
+
+
+            </div>
+
+             <!-- ========Message form======== -->
+              <div class="send-message-form">
+                <h1 class="h3">
+                    Send Message
+                </h1>
+                <div class="form">
+                    <input type="text"  class=" name" placeholder="Full Name " required><br>
+                    <input type="email"  class=" name" placeholder="Email " required><br>
+                    <input type="text"  class=" files" placeholder="Type  Your Message" required>
+                    <div class="btn">
+                        <button type="submit" class="button" onclick="redirectToHome()"> Send and Return to Home</button>
+    
+                    </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+            <script>
+
+              function redirectToHome(){
+                alert('Thanks for your submission ');
+
+                setTimeout(() => {
+                  location.href="swift-jobs.html"
+                  
+                }, 1000);
+              };
+            </script>
+    
+    </header>
+  </body>
+</html>
